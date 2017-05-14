@@ -14,17 +14,37 @@
 	<link href="css/grid12.css" rel="stylesheet" media="screen">                              	 <!-- Grid System -->
 	<link href="css/james_typography.css" rel="stylesheet" media="screen">                       <!-- James Framework - TYPOGRAPHY -->
 	<link href="css/main.css" rel="stylesheet" media="screen">                                   <!-- Main CSS file -->
-    <link href="css/color_scheme_light.css" rel="stylesheet" media="screen">                      <!-- Color scheme (dark/light)-->
+  <link href="css/color_scheme_light.css" rel="stylesheet" media="screen">                      <!-- Color scheme (dark/light)-->
 	<link href="css/colors/color_palette_blue.css" rel="stylesheet" media="screen">              <!-- Color palette -->
 	<link href="css/rapid-icons.css" rel="stylesheet" media="screen">                            <!-- James Framework - ICONS -->
 	<link href="css/js_styles/jquery.maximage.min.css" rel="stylesheet" media="screen">          <!-- MaxImage background image slideshow -->
 	<link href="css/responsivity.css" rel="stylesheet" media="screen">                           <!-- Responsive Fixes -->
 	<link href="css/animate.css" rel="stylesheet" media="screen">                                <!-- Animate - animations -->
 	<link href="css/nivo-lightbox.css" rel="stylesheet" media="screen">                          <!-- Lightbox Styles -->
-    <link href="css/nivo_lightbox_themes/default/default.css" rel="stylesheet" media="screen">   <!-- Lightbox Styles -->
-    <link href="css/owl.carousel.css" rel="stylesheet" media="screen">                           <!-- Owl - Carousel -->
-    <link href="css/owl.theme.css" rel="stylesheet" media="screen">                      		 <!-- Owl - Carousel -->
-    <link href="css/owl.transitions.css" rel="stylesheet" media="screen">                        <!-- Owl - Carousel -->
+  <link href="css/nivo_lightbox_themes/default/default.css" rel="stylesheet" media="screen">   <!-- Lightbox Styles -->
+  <link href="css/owl.carousel.css" rel="stylesheet" media="screen">                           <!-- Owl - Carousel -->
+  <link href="css/owl.theme.css" rel="stylesheet" media="screen">                      		 <!-- Owl - Carousel -->
+  <link href="css/owl.transitions.css" rel="stylesheet" media="screen">                        <!-- Owl - Carousel -->
+  <script>
+    function step(elementId){
+      hideAllSteps();
+      document.getElementById(elementId).style.display = 'block';
+
+      return false;
+    }
+
+    function hideAllSteps(){
+      var steps = document.getElementsByClassName('step');
+      for(var i = 0; i < steps.length; i++){
+        steps[i].style.display = 'none';
+      }
+    }
+
+    window.onload = function(){
+      hideAllSteps();
+      step('step-detail-1');
+    }
+  </script>
 
 	<!-- Modernizer and IE specyfic files -->  
 	<script src="js/modernizr.custom.js"></script>	
@@ -53,77 +73,165 @@
 	<div id="preloader_container">
 	    
 		<!-- Features #################### -->
-		<section id="features" class="subsection background_color2 ">
+		<section id="features" class="subsection background_color2">
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 intro features_anim1">
 						<h3>In 7 stappen naar een product of dienst met potentieel</h3>
-						<p>Een gat in de markt ontdekken begint niet bij het stuiten op een geweldig idee voor een product of dienst.
-              <br />Het idee is namelijk al een oplossing, wat zonder definitie van het probleem en zonder aftoetsen van interesse slechts een schot in het wilde weg is.
-              <br />Het blijkt effectiever om het proces om te draaien en te beginnen bij de essentie, de potentiële klant.</p>
+						<p>Een gat in de markt ontdekken begint niet met het brainstormen naar een geweldig idee voor een product of dienst.
+              <br />Het idee is namelijk al een oplossing, maar zonder vastgesteld probleem of bewijs voor interesse, is het slechts een schot in het wilde weg.
+              <br />Het blijkt effectiever om de zoektocht kort te sluiten en te beginnen bij de essentie, de potentiële klant.</p>
 					</div>	
-				
-					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-						
+				</div>				
+
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
 						<div class="iconbox features_anim3">
-              <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
 							<div data-icon="&#xe059;" class="iconbox_icon"></div>
 							<div class="iconbox_content">
 								<h5>1. Definiëer een interessante doelgroep</h5>
-								<p>Een interessante doelgroep is groot genoeg en heeft geld om te spenderen. Hoe concreter en gerichter hoe beter, zo stuur je naar een niche en vermijd je de platgetreden paden in de zoektocht naar het gat in de markt.</p>
+								<p>Een interessante doelgroep is groot genoeg en heeft geld om te spenderen.
+                  Hoe concreter en gerichter hoe beter, zo stuur je onmiddelijk de zoektocht naar een niche, wat de kans op succes verhoogt door de platgetreden paden te vermijden.</p>
+                <p><a href="#" onclick="return step('step-detail-1')">Lees meer</a></p>
 							</div>
 						</div>
-						
-						<div class="iconbox features_anim4">
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <div id="step-detail-1" class="iconbox features_anim3 step">
+                <p><span data-icon="&#xe0be;"></span> Groot genoeg: <s>lokale platenwinkels</s> versus jonge ouders</p>
+                <p><span data-icon="&#xe0be;"></span> Geld om te spenderen: <s>studenten</s> versus ondernemingen</p>
+                <p><span data-icon="&#xe0be;"></span> Concreet en gericht: <s>dertigers</s> versus jonge ouders met een kind in de voetbalclub</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+						<div class="iconbox features_anim3">
 							<div data-icon="&#xe046;" class="iconbox_icon"></div>
 							<div class="iconbox_content">
 								<h5>2. Som op wat de doelgroep probeert te bereiken</h5>
-								<p>Deze stap mag heel breed gaan, maar moet heel specifieke taken opleveren die specifiek zijn aan de geselecteerde doelgroep.</p>
+								<p>Deze stap mag heel breed gaan, maar moet wel taken opleveren die eigen zijn aan de jouw gekozen doelgroep.</p>
+                <p><a href="#" onclick="return step('step-detail-2')">Lees meer</a></p>
 							</div>
 						</div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+						<div id="step-detail-2" class="iconbox features_anim3 step">
+              <p>Niets is irrelevant; van opstaan tot slapengaan, zonder filter, zowel op persoonlijk als op professioneel vlak, zowel op korte als op lange termijn. 
+                Zelfs taken op die volgens jouw al "opgelost" zijn</p>
+              <p>Geen persoonlijke contacten in jouw doelgroep, probeer online:</p>
+              
+              <p><span data-icon="&#xe009;"> </span> Is er een online community, zoals <a href="https://www.reddit.com/subreddits/">subreddit</a>, <a href="https://www.facebook.com/groups/">Facebook group</a> of <a href="https://stackexchange.com/">StackExchange QA site</a>?</p>
+              <p><span data-icon="&#xe009;"> </span> Kan je via product reviews voor specifieke producten die eigen zijn aan doelgroep ontdekken wat voor hen aanslaat en waar er tekortkomingen zijn? (vb. Amazon, bol.com, Cool Blue, Etsy)</p>
+              <p><span data-icon="&#xe009;"> </span> Kan je iets halen uit hun horecay belevingen via <a href="https://nl.yelp.be/">Yelp</a>, <a href="https://www.tripadvisor.com/">TripAdvisor</a>, <a href="https://foursquare.com/">Foursquare</a>?</p>
+              <p><span data-icon="&#xe009;"> </span> Analyseer waar ondernemingen naar vragen in <a href="https://freelancer.be/opdrachten">freelance opdrachten</a></p>
+						</div>
+          </div>
+        </div>
 						
-						<div class="iconbox features_anim5">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+						<div class="iconbox features_anim3">
 							<div data-icon="&#xe34d;" class="iconbox_icon"></div>
 							<div class="iconbox_content">
-								<h5>3. Geef de ideale oplossingen zonder rekening te houden met beperkingen</h5>
+								<h5>3. Bedenk de ideale oplossingen zonder rekening te houden met beperkingen</h5>
 								<p>Een ideale oplossing vervult een taak zo simpel en goed als mogelijk voor de doelgroep.</p>
+                <p><a href="#" onclick="return step('step-detail-3')">Lees meer</a></p>
 							</div>
 						</div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+						<div id="step-detail-3" class="iconbox features_anim3 step">
+              <p>Het is in deze stap belangrijk om los van beperkingen of belemmeringen te denken, om zo tot de essentie te komen van de waarde die geleverd wordt.</p> 
+              <p>De taken die in voorgaande stap als "opgelost" bestempeld zijn, tracht je nu te overtreffen door een oplossing te geven die beter wanneer je zonder beperkingen werkt.</p>
+						</div>
+          </div>
+        </div>
 
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
             <div class="iconbox features_anim3">
 							<div data-icon="&#xe036;" class="iconbox_icon"></div>
 							<div class="iconbox_content">
 								<h5>4. Vertaal naar haalbare producten of diensten</h5>
 								<p>Wat haalbaar is hangt af van jouw ambitie, middelen en zin voor risico.</p>
+                <p><a href="#" onclick="return step('step-detail-4')">Lees meer</a></p>
 							</div>
 						</div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <div id="step-detail-4" class="iconbox features_anim3 step">
+              <p>Dit is waar je met creativeit wint.</p>
+              <p>Een teleport oplossing om part-time yoga leraars op tijd in hun klas te krijgen door de avondspits, kan een tele-yoga oplossing worden. 
+            Dit klinkt vandaag op het eerste zicht raar, maar lost de essentie van het probleem op (en bestaat!)</p>
+                <p>Dat iets al bestaat is geen probleem, tenzij je mikt op 100% marktaandeel, het betekent enkel dat iemand voor jouw al het idee gevalideerd heeft op de markt! (check via <a href="https://www.finactum.be/">financtum</a> hoe succesvol ze ermee zijn)</p>
+            </div>
+          </div>
+        </div>
 						
-						<div class="iconbox features_anim4">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+						<div class="iconbox features_anim3">
 							<div data-icon="&#xe560;" class="iconbox_icon"></div>
 							<div class="iconbox_content">
 								<h5>5. Valideer het beste voorstel</h5>
 								<p>Kies het beste voorstel voor een product of dienst.</p>
+                <p><a href="#" onclick="return step('step-detail-5')">Lees meer</a></p>
 							</div>
 						</div>
-						
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+						<div id="step-detail-5" class="iconbox features_anim3 step">
+              <p>Je hebt inderdaad nog steeds geen uitgewerkt product, het is zelfs nog te vroeg voor een minimum viable product (MVP)</p>
+              <p>Wat je nu wilt meten is, als je jouw voorstel doet aan jouw doelgroep, krijg je dan iets van respons?</p>
+              <p>Je kan een <a href="https://www.leadpages.net/">landing page</a> maken waar je preorders of om een email adres vraagt.</p>
+              <p>Dit is een leerfase, je ontdekt of je wel uw doelgroep kunt bereiken en of je een reactie krijgt op wat volgens jouw de ideale oplossing is voor wat ze proberen te bereiken.</p>
+              <a href="https://beta.bol.com/nl/p/value-proposition-design/9200000029281206/">
+                <img src="https://staticbeta.bol.com/imgbase0/imagebase3/large/FC/6/0/2/1/9200000029281206.jpg" alt="Value Proposition Design" width="250" height="200" />
+              </a>
+						</div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">		
 						<div class="iconbox features_anim5">
 							<div data-icon="&#xe54e;" class="iconbox_icon"></div>
 							<div class="iconbox_content">
 								<h5>6. Creëer een business model</h5>
 								<p>Werk nu de details uit, hoe ga je het implementeren, hoe ga je er aan verdienen?</p>
+                <p><a href="#" onclick="return step('step-detail-6')">Lees meer</a></p>
 							</div>
 						</div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+						<div id="step-detail-6" class="iconbox features_anim3 step">
+              <p>Zorg dat je het onder de knie hebt met:</p>
+              <a href="https://www.bol.com/nl/p/business-model-generation/9200000034580544/">
+              <img src="https://s.s-bol.com/imgbase0/imagebase3/large/FC/4/4/5/0/9200000034580544.jpg" alt="Business Model Generation" width="250" height="200" />
+              </a>
+						</div>
+          </div>
+        </div>
 
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
             <div class="iconbox features_anim5">
 							<div data-icon="&#xe01e;" class="iconbox_icon"></div>
 							<div class="iconbox_content">
 								<h5>7. Launch time!</h5>
 								<p>Vol vertrouwen starten.</p>
+                <p><a href="#" onclick="return step('step-detail-7')">Lees meer</a></p>
 							</div>
 						</div>
-							
 					</div>
-				</div>				
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+						<div id="step-detail-7" class="iconbox features_anim3 step">
+              <p><a href="http://www.xerius.be/kennis">Succes!</a></p>
+						</div>
+          </div>
+        </div>
 			</div>	
 		</section><!-- //Features -->
 		
