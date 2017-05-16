@@ -1,7 +1,7 @@
 (function($) {
 var App = { init: function() { 
 	App.HomepageOpacity();          // changes homepage opacity on scroll
-	App.MaxImage_Video();           // homepage background - video
+	//App.MaxImage_Video();           // homepage background - video
 	App.MaxImage_Slider();          // homepage background - image slider
 	App.MaxImage_Single();          // homepage background - vingle image
 	App.ScrollToSomeplace();        // script resposible for smooth scrolling after clicking on menu item
